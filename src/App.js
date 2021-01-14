@@ -1,14 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Login from '../src/components/Login';
+import Done from '../src/components/Done';
+import {Route,BrowserRouter as Router ,Switch } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        hsfsyy
-      </header>
+    <Router>
+    <div>
+    
+    <Switch>
+    < Route path="/done" exact component={Done}>
+      
+      </Route>
+      <Route path="/" component={Login}>
+      
+      </Route>
+      
+    </Switch>
+
     </div>
+    </Router>
+    
   );
 }
 
